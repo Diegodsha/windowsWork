@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viweport" content="width=device-with, initial-scale=1.0">
+    <title>Documento diegochimo</title>
+
+</head> 
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+body{
+   background-color: #9FAF9C;
+   color: rgb(1, 3, 8);
+}
+
+.header{
+   color: blueviolet;
+}
+p{
+   font-size: 16px;
+   font-family: sans-serif;
+}
+div.intro{
+   width: 40%;
+   border-style: solid;
+   border-color: rgb(3, 3, 3);
+   background-color: rgb(22, 60, 185);
+   border-radius: 2mm 2mm 2mm 2mm; /** funciona en sentido horario, top, right, bottom, left**/
+   /** border-top-left-radius: 2mm;
+   border-top-right-radius: 2mm;    (manera larga de establecer el radio de la caja)
+   border-bottom-left-radius: 2mm;
+   border-bottom-right-radius: 2mm;**/
+   margin-left: 5mm;
+   text-align: center;
+   color: blanchedalmond;
+
+}
+.box-intro{
+   background-color: yellow;
+   color: brown;
+   margin: 65px 10px 10px 10px;
+   padding: 65px 10px 10px 10px;
+}
+
+div.container {
+  width: 50%;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+div.box {
+  box-sizing: border-box;
+  width: 50%;
+  border: 5px solid red;
+  float: left;
+}
+
+[type='radio'] {
+  margin: 20px 0px 20px 0px;
+}
+
+[type='checkbox'] {
+   margin: 20px 0px 20px 0px;
+}
+.circle-image {
+   border-style: solid;
+   border-radius: 50%;
+   margin: 15px;
+}
+
+/** *{              it desactivates the background color of the div
+   background-color:#9FAF9C;
+}**/
+</style>
+
+<body> 
+    <h1>MOTONICA</h1>
+    <p id= "menu"><h2 class="header">Menú</h2></p> 
+ <p>Beautiful <a href="https://www.youtube.com/watch?v=mISMrrSQbfQ" target="_blank"> random video </a> </p>
+  <p> 
+ <img src="https://media.giphy.com/media/mJyjI5ZbrMME0/giphy.gif" width="320" height="160" >
+  </p>
+<ol> <!--ol is for black dot lists-->
+ <li> List item #1</li>
+ <li> List item #2</li>  
+</ol>    
+ <main> 
+    <div class="intro">
+ <p class="box-intro">This is a website for people who loves motorcycles,<br>
+    for people who have or want to have one, for tunning <br>
+    your motorcycle, and more...
+ </p>
+    </div>
+<br>
+    <div class="container">
+      <div class="box">This div occupies the left half</div>
+      <div class="box">This div occupies the right half</div>
+      <div style="clear:both;"></div>
+    </div>
+    
+
+ <p>
+    <form action="https://www.google.com.mx/?hl=es-419"target="_blank"><input type="text"required placeholder="User will see this text in the box"><button type="submit">this button submits the form</button>
+     <br>
+     <br>
+        Wich motorbike you like the most?
+     <br>
+     <label for="Yamaha Mt-09"> 
+        <input id="Yamaha" type="radio" name="FavBike">Yamaha Mt-09
+      </label>
+     <label for="Ducati Diavel S"> 
+        <input id="Ducati" value="Ducati" type="radio" name="FavBike" checked>Ducati Diavel S 
+      </label>
+     <label for="BMW s1000rr"> 
+        <input id="BMW" value="BMW" type="radio" name="FavBike">BWM s1000rr 
+      </label>
+      <br>
+      Wich CC have you ride before?
+      <br>
+      <label for="200cc or below"><input id="200" value="200" type="checkbox" name="CCRide" checked> 200cc or below</label>
+      <label for="400cc"><input id="400" value="400" type="checkbox" name="CCRide"> 400cc</label>
+      <label for="600cc"><input id="600" value="600" type="checkbox" name="CCRide"> 600cc</label>
+      <label for="1000cc or above"><input id="1000" value="1000" type="checkbox" name="CCRide"> 1000cc or above</label>
+    </form>
+ </p>
+ </main>
+ <br>
+   <h3>¿WICH MOTORCYCLE YOU OWN OR WANT TO OWN?</h3>
+    <link rel="stylesheet" href="myfirsweb.css">
+ 
+ Go to ducati website by clicking the image
+ <br>
+ <a href="https://www.ducati.com/mx/es/home"
+ id="test"><img src="/home/diego/Pictures/Moto/panigale.jpg" title="ducati panigale" width="500" height="500"></a> 
+ <br> 
+ <p id="tips">Useful tips</p>
+ <p>I´m gonna give you some cool new tips every weekend</p>
+ <br>
+ <ul> <!--ul is for numbered lists-->
+    <li>Advices for purchasing a new and used bike</li>
+    <li>Some basic maintenance tips</li>
+    <li>And a few stunt tricks you need to master to get more fun</li>
+ </ul>
+ <br>
+ Go to yamaha web page
+ <br>
+ <a href="https://www.yamaha-motor.com.mx/motos.php" > <img src="/home/diego/Pictures/Moto/yamaha.jpg" alt="moto" title="Yamaha r15" width="550" height="550"></a> 
+ <br>
+ Go to ktm webpage
+ <br>
+ <a href="https://www.ktm.com/es-mx.html" ><img src="/home/diego/Pictures/Moto/ktmduke.jpg" alt="moto" title="ktm 1290 superduke" width="700"> </a> 
+ <br>
+ Click the image and go to my facebook
+ <br>
+ <a href="https://www.facebook.com/diegochimo"><img class="circle-image" src="/home/diego/Pictures/Moto/domi.jpg" alt= "fotito" title="acceso directo a mi face" width="600" height="550"> <div align="center"></div> </a>  
+ <br>
+ Jump to <a href="#tips">Useful tips </a> section
+ <br>
+ <br>
+ Go back to <a href="#menu">menú</a>
+</body>
+</html>
+
