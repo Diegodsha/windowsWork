@@ -15,6 +15,7 @@ p {
 #tips {
   font-size: 25pt;
   font-family: Lobster;
+  opacity: 0.5;
 }
 h3 {
   color: blue;

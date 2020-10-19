@@ -9,12 +9,12 @@
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
 body{
-   background-color: #9FAF9C;
+   background-color: #f3f7f2a6;
    color: rgb(1, 3, 8);
 }
 
 .header{
-   color: blueviolet;
+   color: blueviolet !important; /** IMPORTANT to override every any selector**/
 }
 p{
    font-size: 16px;
@@ -33,13 +33,15 @@ div.intro{
    margin-left: 5mm;
    text-align: center;
    color: blanchedalmond;
+   box-shadow: 0 20px 10px rgba(0,0,0,0.59), 10px 10px 10px rgba(0,0,0,0.43);
+
 
 }
 .box-intro{
    background-color: yellow;
    color: brown;
    margin: 65px 10px 10px 10px;
-   padding: 65px 10px 10px 10px;
+   padding: 65px 10px 65px 10px;
 }
 
 div.container {
@@ -66,7 +68,23 @@ div.box {
    border-style: solid;
    border-radius: 50%;
    margin: 15px;
+   position: relative;
+   left: 350px;
 }
+div.title{
+   background-color: rgb(5, 5, 5);
+   margin: -10px 10px 40px 10px;
+   padding: 0px 55px 0px 55px;
+   border-radius: 3mm 3mm 3mm 3mm;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   position: fixed;
+   left: 450px;
+   z-index: 2
+   
+   
+
+}
+
 
 /** *{              it desactivates the background color of the div
    background-color:#9FAF9C;
@@ -74,8 +92,10 @@ div.box {
 </style>
 
 <body> 
-    <h1>MOTONICA</h1>
-    <p id= "menu"><h2 class="header">Menú</h2></p> 
+   
+     <div class="title"><h1>MOTONICA </h1></div>
+   
+    <p id= "menu"><h2 style="color: crimson;" class="header">Menú</h2></p> 
  <p>Beautiful <a href="https://www.youtube.com/watch?v=mISMrrSQbfQ" target="_blank"> random video </a> </p>
   <p> 
  <img src="https://media.giphy.com/media/mJyjI5ZbrMME0/giphy.gif" width="320" height="160" >
@@ -84,6 +104,7 @@ div.box {
  <li> List item #1</li>
  <li> List item #2</li>  
 </ol>    
+<hr>
  <main> 
     <div class="intro">
  <p class="box-intro">This is a website for people who loves motorcycles,<br>
@@ -92,13 +113,12 @@ div.box {
  </p>
     </div>
 <br>
+<hr>
     <div class="container">
       <div class="box">This div occupies the left half</div>
       <div class="box">This div occupies the right half</div>
       <div style="clear:both;"></div>
-    </div>
-    
-
+    </div>    
  <p>
     <form action="https://www.google.com.mx/?hl=es-419"target="_blank"><input type="text"required placeholder="User will see this text in the box"><button type="submit">this button submits the form</button>
      <br>
@@ -126,13 +146,14 @@ div.box {
  </main>
  <br>
    <h3>¿WICH MOTORCYCLE YOU OWN OR WANT TO OWN?</h3>
-    <link rel="stylesheet" href="myfirsweb.css">
+    <link rel="stylesheet" href="myFirstc.css">
  
  Go to ducati website by clicking the image
  <br>
  <a href="https://www.ducati.com/mx/es/home"
  id="test"><img src="/home/diego/Pictures/Moto/panigale.jpg" title="ducati panigale" width="500" height="500"></a> 
  <br> 
+ <hr>
  <p id="tips">Useful tips</p>
  <p>I´m gonna give you some cool new tips every weekend</p>
  <br>
@@ -152,12 +173,13 @@ div.box {
  <br>
  Click the image and go to my facebook
  <br>
- <a href="https://www.facebook.com/diegochimo"><img class="circle-image" src="/home/diego/Pictures/Moto/domi.jpg" alt= "fotito" title="acceso directo a mi face" width="600" height="550"> <div align="center"></div> </a>  
+ <a href="https://www.facebook.com/diegochimo"><img class="circle-image" src="/home/diego/Pictures/Moto/domi.jpg" alt= "fotito" title="acceso directo a mi face" width="600" height="550"> </a>  
  <br>
- Jump to <a href="#tips">Useful tips </a> section
+ <hr>
+ Jump to <a href="#tips"><strong>Useful tips</strong> </a> section
  <br>
  <br>
- Go back to <a href="#menu">menú</a>
+ Go back to <a href="#menu"><strong>menú</strong></a>
 </body>
 </html>
 
