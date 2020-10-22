@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
 body{
-   background-color: #f3f7f2a6;
+   background:  url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
    color: rgb(1, 3, 8);
 }
 
@@ -33,12 +33,12 @@ div.intro{
    margin-left: 5mm;
    text-align: center;
    color: blanchedalmond;
-   box-shadow: 0 20px 10px rgba(0,0,0,0.59), 10px 10px 10px rgba(0,0,0,0.43);
+   box-shadow: 0 20px 10px rgba(13, 13, 14, 0.59), 10px 10px 10px rgba(2, 2, 2, 0.43);
 
 
 }
 .box-intro{
-   background-color: yellow;
+   background: linear-gradient(35deg, white, yellow);
    color: brown;
    margin: 65px 10px 10px 10px;
    padding: 65px 10px 65px 10px;
@@ -72,23 +72,114 @@ div.box {
    left: 350px;
 }
 div.title{
-   background-color: rgb(5, 5, 5);
+   background: black;
    margin: -10px 10px 40px 10px;
    padding: 0px 55px 0px 55px;
    border-radius: 3mm 3mm 3mm 3mm;
    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
    position: fixed;
    left: 450px;
-   z-index: 2
-   
-   
+   z-index: 2 ;/** for override al nonflow elements**/ 
+   animation-name: rainbow;
+   animation-duration: 6s;
+   animation-iteration-count: infinite;
+}
 
+@keyframes rainbow {
+  0%{
+    background-color: rgb(224, 6, 6);
+  }
+  50%{
+    background-color: rgb(206, 128, 10);
+  }
+  100%{
+    background-color: rgb(5, 5, 5);
+  }
 }
 
 
-/** *{              it desactivates the background color of the div
+p.float:hover{
+   transform: scale(1.5); /* animates the scale of an object*/
+   position: relative;
+   left: 350px;
+
+   
+}
+
+button{
+   background: rgb(13, 139, 40);
+
+}
+
+button:hover{
+   animation-name: newcolor;
+   animation-duration: 500ms;
+   animation-fill-mode: forwards; /*this keeps the animation changes so it doesnt go back to its original form*/
+   animation-iteration-count: infinite;
+}
+@keyframes newcolor{
+   100%{
+      background-color: #45b901;
+   }
+}
+
+#moveimg{
+   border-radius: 2mm;
+   position: relative;
+   animation-name: moves;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   -moz-animation-timing-function: ease-in;
+   
+}
+@keyframes moves{
+   0%{
+      left: 0px;
+   } 
+   50%{
+      left: 55px;
+   }
+   100%{
+      left:0px;
+   }
+   
+}
+
+/** *{   it desactivates the background color of the div bc *is for all in the doc
    background-color:#9FAF9C;
 }**/
+
+/*
+Here's an example of a media query that returns the content when the device's width is less than or equal to 100px:
+
+@media (max-width: 100px) {
+   p{
+      font-size: 10px
+   }
+}
+
+and the following media query returns the content when the device's height is more than or equal to 350px:
+
+@media (min-height: 350px)
+
+*/
+
+.d1{background:LightSkyBlue;} /*THIS SECTION IS FOR CSS GRID*/
+   .d2{background:LightSalmon;}
+   .d3{background:PaleTurquoise;}
+   .d4{background:LightPink;}
+   .d5{background:PaleGreen;}
+ 
+   .container {
+     font-size: 40px;
+     min-height: 300px;
+     width: 100%;
+     background: LightGray;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr; 
+    grid-column-gap: 20px;
+   }
 </style>
 
 <body> 
@@ -98,7 +189,7 @@ div.title{
     <p id= "menu"><h2 style="color: crimson;" class="header">Menú</h2></p> 
  <p>Beautiful <a href="https://www.youtube.com/watch?v=mISMrrSQbfQ" target="_blank"> random video </a> </p>
   <p> 
- <img src="https://media.giphy.com/media/mJyjI5ZbrMME0/giphy.gif" width="320" height="160" >
+ <img id="moveimg" src="https://media.giphy.com/media/mJyjI5ZbrMME0/giphy.gif" width="320" height="160" >
   </p>
 <ol> <!--ol is for black dot lists-->
  <li> List item #1</li>
@@ -123,7 +214,10 @@ div.title{
     <form action="https://www.google.com.mx/?hl=es-419"target="_blank"><input type="text"required placeholder="User will see this text in the box"><button type="submit">this button submits the form</button>
      <br>
      <br>
-        Wich motorbike you like the most?
+     <fieldset>
+        <legend>
+        <p tabindex="0" class="float">Wich motorbike you like the most?</p>
+        </legend>
      <br>
      <label for="Yamaha Mt-09"> 
         <input id="Yamaha" type="radio" name="FavBike">Yamaha Mt-09
@@ -142,6 +236,7 @@ div.title{
       <label for="600cc"><input id="600" value="600" type="checkbox" name="CCRide"> 600cc</label>
       <label for="1000cc or above"><input id="1000" value="1000" type="checkbox" name="CCRide"> 1000cc or above</label>
     </form>
+    </fieldset>
  </p>
  </main>
  <br>
@@ -179,7 +274,15 @@ div.title{
  Jump to <a href="#tips"><strong>Useful tips</strong> </a> section
  <br>
  <br>
- Go back to <a href="#menu"><strong>menú</strong></a>
+ Go back to <a  href="#menu"><strong>menú</strong></a>
+<br>
+<div class="container">
+   <div class="d1">1</div>
+   <div class="d2">2</div>
+   <div class="d3">3</div>
+   <div class="d4">4</div>
+   <div class="d5">5</div>
+ </div>
 </body>
 </html>
 
