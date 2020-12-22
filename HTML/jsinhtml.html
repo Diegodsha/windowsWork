@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <label for="theme">Select theme: </label>
+    <select id="theme">
+      <option value="white">White</option>
+      <option value="black">Black</option>
+    </select>
+    <button>press me</button>
+    <script>
+      // Your JavaScript goes here!
+      let max = 57;
+      let actual = max - 13;
+      let percentage = actual / max;
+      console.log(percentage);
+
+      const button = document.querySelector("button");
+
+      button.onclick = function () {
+        let name = prompt("What is your name?");
+        alert("Hello " + name + ", nice to see you!");
+      };
+      let myNum = 123;
+      let myString = myNum.toString();
+      typeof myString;
+      console.log();
+
+      const select = document.querySelector("select");
+      const html = document.querySelector("html");
+      document.body.style.padding = "10px";
+
+      function update(bgColor, textColor) {
+        html.style.backgroundColor = bgColor;
+        html.style.color = textColor;
+      }
+
+      select.onchange = function () {
+        select.value === "black"
+          ? update("black", "white")
+          : update("white", "black");
+      };
+    </script>
+  </body>
+</html>

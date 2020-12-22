@@ -2,191 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viweport" content="width=device-with, initial-scale=1.0">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
     <title>Documento diegochimo</title>
 
-</head> 
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-<style>
-body{
-   background:  url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
-   color: rgb(1, 3, 8);
-}
-
-.header{
-   color: blueviolet !important; /** IMPORTANT to override every any selector**/
-}
-p{
-   font-size: 16px;
-   font-family: sans-serif;
-}
-div.intro{
-   width: 40%;
-   border-style: solid;
-   border-color: rgb(3, 3, 3);
-   background-color: rgb(22, 60, 185);
-   border-radius: 2mm 2mm 2mm 2mm; /** funciona en sentido horario, top, right, bottom, left**/
-   /** border-top-left-radius: 2mm;
-   border-top-right-radius: 2mm;    (manera larga de establecer el radio de la caja)
-   border-bottom-left-radius: 2mm;
-   border-bottom-right-radius: 2mm;**/
-   margin-left: 5mm;
-   text-align: center;
-   color: blanchedalmond;
-   box-shadow: 0 20px 10px rgba(13, 13, 14, 0.59), 10px 10px 10px rgba(2, 2, 2, 0.43);
-
-
-}
-.box-intro{
-   background: linear-gradient(35deg, white, yellow);
-   color: brown;
-   margin: 65px 10px 10px 10px;
-   padding: 65px 10px 65px 10px;
-}
-
-div.container {
-  width: 50%;
-  border: 2px solid black;
-  padding: 5px;
-}
-
-div.box {
-  box-sizing: border-box;
-  width: 50%;
-  border: 5px solid red;
-  float: left;
-}
-
-[type='radio'] {
-  margin: 20px 0px 20px 0px;
-}
-
-[type='checkbox'] {
-   margin: 20px 0px 20px 0px;
-}
-.circle-image {
-   border-style: solid;
-   border-radius: 50%;
-   margin: 15px;
-   position: relative;
-   left: 350px;
-}
-div.title{
-   background: black;
-   margin: -10px 10px 40px 10px;
-   padding: 0px 55px 0px 55px;
-   border-radius: 3mm 3mm 3mm 3mm;
-   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-   position: fixed;
-   left: 450px;
-   z-index: 2 ;/** for override al nonflow elements**/ 
-   animation-name: rainbow;
-   animation-duration: 6s;
-   animation-iteration-count: infinite;
-}
-
-@keyframes rainbow {
-  0%{
-    background-color: rgb(224, 6, 6);
-  }
-  50%{
-    background-color: rgb(206, 128, 10);
-  }
-  100%{
-    background-color: rgb(5, 5, 5);
-  }
-}
-
-
-p.float:hover{
-   transform: scale(1.5); /* animates the scale of an object*/
-   position: relative;
-   left: 350px;
-
-   
-}
-
-button{
-   background: rgb(13, 139, 40);
-
-}
-
-button:hover{
-   animation-name: newcolor;
-   animation-duration: 500ms;
-   animation-fill-mode: forwards; /*this keeps the animation changes so it doesnt go back to its original form*/
-   animation-iteration-count: infinite;
-}
-@keyframes newcolor{
-   100%{
-      background-color: #45b901;
-   }
-}
-
-#moveimg{
-   border-radius: 2mm;
-   position: relative;
-   animation-name: moves;
-   animation-duration: 2s;
-   animation-iteration-count: infinite;
-   -moz-animation-timing-function: ease-in;
-   
-}
-@keyframes moves{
-   0%{
-      left: 0px;
-   } 
-   50%{
-      left: 55px;
-   }
-   100%{
-      left:0px;
-   }
-   
-}
-
-/** *{   it desactivates the background color of the div bc *is for all in the doc
-   background-color:#9FAF9C;
-}**/
-
-/*
-Here's an example of a media query that returns the content when the device's width is less than or equal to 100px:
-
-@media (max-width: 100px) {
-   p{
-      font-size: 10px
-   }
-}
-
-and the following media query returns the content when the device's height is more than or equal to 350px:
-
-@media (min-height: 350px)
-
-*/
-
-.d1{background:LightSkyBlue;} /*THIS SECTION IS FOR CSS GRID*/
-   .d2{background:LightSalmon;}
-   .d3{background:PaleTurquoise;}
-   .d4{background:LightPink;}
-   .d5{background:PaleGreen;}
- 
-   .container {
-     font-size: 40px;
-     min-height: 300px;
-     width: 100%;
-     background: LightGray;
-     display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr; 
-    grid-column-gap: 20px;
-   }
-</style>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="myFirstc.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap" rel="stylesheet">
+   </head> 
 <body> 
+   <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#"><div class="title"><h1>MOTONICA </h1></div></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#tips">Usefull tips</a></li>
+                <li><a href="#">Page 1-2</a></li>
+                <li><a href="#">Page 1-3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- nav -->
    
-     <div class="title"><h1>MOTONICA </h1></div>
-   
-    <p id= "menu"><h2 style="color: crimson;" class="header">Menú</h2></p> 
+     
+     <label for="theme">Select theme: </label>
+<select id="theme">
+  <option value="white">White</option>
+  <option value="black">Black</option>
+</select>
+
+     <button class="welcome">
+        WELCOME!!
+     </button>
+       <p id= "menu"><h2 style="color: crimson;" class="header">Menú</h2></p> 
  <p>Beautiful <a href="https://www.youtube.com/watch?v=mISMrrSQbfQ" target="_blank"> random video </a> </p>
   <p> 
  <img id="moveimg" src="https://media.giphy.com/media/mJyjI5ZbrMME0/giphy.gif" width="320" height="160" >
@@ -205,7 +74,7 @@ and the following media query returns the content when the device's height is mo
     </div>
 <br>
 <hr>
-    <div class="container">
+    <div class="container1">
       <div class="box">This div occupies the left half</div>
       <div class="box">This div occupies the right half</div>
       <div style="clear:both;"></div>
@@ -241,12 +110,11 @@ and the following media query returns the content when the device's height is mo
  </main>
  <br>
    <h3>¿WICH MOTORCYCLE YOU OWN OR WANT TO OWN?</h3>
-    <link rel="stylesheet" href="myFirstc.css">
  
  Go to ducati website by clicking the image
  <br>
  <a href="https://www.ducati.com/mx/es/home"
- id="test"><img src="/home/diego/Pictures/Moto/panigale.jpg" title="ducati panigale" width="500" height="500"></a> 
+ id="test"><img src="/home/diego/Pictures/Moto/panigale.jpg" alt="Ducati panigale" title="Ducati panigale" width="500" height="500"></a> 
  <br> 
  <hr>
  <p id="tips">Useful tips</p>
@@ -260,15 +128,15 @@ and the following media query returns the content when the device's height is mo
  <br>
  Go to yamaha web page
  <br>
- <a href="https://www.yamaha-motor.com.mx/motos.php" > <img src="/home/diego/Pictures/Moto/yamaha.jpg" alt="moto" title="Yamaha r15" width="550" height="550"></a> 
+ <a href="https://www.yamaha-motor.com.mx/motos.php" > <img src="/home/diego/Pictures/Moto/yamaha.jpg" alt="Yamaha r15" title="Yamaha r15" width="550" height="550"></a> 
  <br>
  Go to ktm webpage
  <br>
- <a href="https://www.ktm.com/es-mx.html" ><img src="/home/diego/Pictures/Moto/ktmduke.jpg" alt="moto" title="ktm 1290 superduke" width="700"> </a> 
+ <a href="https://www.ktm.com/es-mx.html" ><img src="/home/diego/Pictures/Moto/ktmduke.jpg" alt="Ktm 1290" title="ktm 1290 superduke" width="700"> </a> 
  <br>
  Click the image and go to my facebook
  <br>
- <a href="https://www.facebook.com/diegochimo"><img class="circle-image" src="/home/diego/Pictures/Moto/domi.jpg" alt= "fotito" title="acceso directo a mi face" width="600" height="550"> </a>  
+ <a href="https://www.facebook.com/diegochimo"><img class="circle-image" src="/home/diego/Pictures/Moto/domi.jpg" alt= "Enlace a facebook" title="acceso directo a mi face" width="600" height="550"> </a>  
  <br>
  <hr>
  Jump to <a href="#tips"><strong>Useful tips</strong> </a> section
@@ -276,13 +144,17 @@ and the following media query returns the content when the device's height is mo
  <br>
  Go back to <a  href="#menu"><strong>menú</strong></a>
 <br>
-<div class="container">
+<div class="container2">
    <div class="d1">1</div>
    <div class="d2">2</div>
    <div class="d3">3</div>
    <div class="d4">4</div>
    <div class="d5">5</div>
  </div>
+ <script src="codigo.js">
+ </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 
